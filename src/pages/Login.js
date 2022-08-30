@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { getUser } from '../redux/actions';
@@ -78,5 +79,10 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  history: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
+};
 
 export default connect()(Login);
