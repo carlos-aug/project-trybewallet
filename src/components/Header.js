@@ -10,7 +10,7 @@ class Header extends Component {
         <div>Header</div>
         <p data-testid="email-field">{user}</p>
         <p data-testid="total-field">
-          {expenses.length === 0 ? '0' : (expenses.reduce((acc, cur) => acc
+          {expenses.length === 0 ? '0.00' : (expenses.reduce((acc, cur) => acc
           + Number(cur.value) * Number(cur.exchangeRates[cur.currency].ask), 0).toFixed(2)
           )}
 

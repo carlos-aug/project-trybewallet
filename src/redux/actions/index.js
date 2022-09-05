@@ -3,6 +3,7 @@ export const LOG_IN = 'LOG_IN';
 export const REQUEST_INFO_COINS = 'REQUEST_INFO_COINS';
 export const RECEIVED_INFO_COINS = 'RECEIVED_INFO_COINS';
 export const SAVE_INFO = 'SAVE_INFO';
+export const REMOVE_INFO_COINS = 'REMOVE_INFO_COINS';
 
 export const getUser = (email) => ({ type: LOG_IN, email });
 
@@ -15,6 +16,11 @@ export const receivedInfoCoins = (currencies) => ({
 
 export const saveInfoExpenses = (expenses) => ({
   type: SAVE_INFO,
+  expenses,
+});
+
+export const removeInfoExpenses = (expenses) => ({
+  type: REMOVE_INFO_COINS,
   expenses,
 });
 

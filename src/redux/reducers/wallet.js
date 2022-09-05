@@ -16,6 +16,11 @@ const walletReducer = (state = INITIAL_STATE, action) => {
       ...state,
       expenses: [...state.expenses, action.expenses],
     };
+  case 'REMOVE_INFO_COINS':
+    return {
+      ...state,
+      expenses: [...action.expenses],
+    };
   default:
     return state;
   }
