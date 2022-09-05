@@ -42,10 +42,12 @@ class Table extends Component {
                   {Number(expense.exchangeRates[expense.currency]
                     .ask * expense.value).toFixed(2)}
                 </td>
+                <td>BRL</td>
                 <td>
                   <button
                     type="button"
                     data-testid="delete-btn"
+                    value={ expense.id }
                     onClick={ () => this.handleClick(expense.id) }
                   >
                     Excluir
@@ -62,6 +64,7 @@ class Table extends Component {
 
 const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
+  id: state.wallet.id,
 });
 
 Table.propTypes = {
