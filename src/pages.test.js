@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from '../../App';
-import WalletForm from '../../components/WalletForm';
-import renderWithRouterAndRedux from './renderWith';
+import App from './App';
+import WalletForm from './components/WalletForm';
+import renderWithRouterAndRedux from './tests/helpers/renderWith';
 
 describe('Tela de login', () => {
   test('Verifica se e a página inicial é renderizada', () => {
